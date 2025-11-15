@@ -106,6 +106,7 @@ section {
 .hero-image img {
     width: 100%;
     height: auto;
+    aspect-ratio: 1078 / 1409;
     object-fit: cover;
 }
 
@@ -315,8 +316,8 @@ section {
 }
 
 .phone-spacer {
-    height: 68px;
-    margin-bottom: 10px;
+    height: 0;
+    margin-bottom: 0;
 }
 
 .parent-label {
@@ -408,6 +409,11 @@ section {
     .parents-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 60px;
+    }
+
+    .phone-spacer {
+        height: 68px;
+        margin-bottom: 10px;
     }
 
     .section-title {

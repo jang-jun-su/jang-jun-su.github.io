@@ -376,6 +376,44 @@ section {
 }
 
 /* ========================================
+   Location Section
+   ======================================== */
+.location {
+    background-color: var(--color-white);
+}
+
+.location-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.location-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.location-address {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.map-container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* ========================================
    Footer
    ======================================== */
 .footer {

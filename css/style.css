@@ -1,0 +1,488 @@
+/* ========================================
+   Reset & Base Styles
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #c9b8a8;
+    --color-text: #5a4a42;
+    --color-text-light: #8a7a72;
+    --color-bg: #faf9f7;
+    --color-white: #ffffff;
+    --font-serif: 'Noto Serif KR', serif;
+    --font-display: 'Cormorant Garamond', serif;
+    --max-width: 800px;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================================
+   Container
+   ======================================== */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   Section Common Styles
+   ======================================== */
+section {
+    position: relative;
+    padding: 60px 0;
+}
+
+.section-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* ========================================
+   Hero Section
+   ======================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-text {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--color-white);
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.couple-label {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+}
+
+.groom-name,
+.bride-name {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.heart {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+/* ========================================
+   Below Main Section
+   ======================================== */
+.below-main {
+    position: relative;
+    padding: 100px 20px;
+    background-color: var(--color-bg);
+}
+
+.below-main-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: var(--max-width);
+    height: 100%;
+    z-index: 0;
+}
+
+.below-main-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.below-main-content {
+    position: relative;
+    z-index: 1;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.names-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
+.name-group-left,
+.name-group-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.name-group-left {
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.name-group-right {
+    margin-top: 80px;
+    margin-right: 20px;
+}
+
+.couple-label {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--color-text-light);
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.name-left,
+.name-right {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #000;
+    letter-spacing: 0.2em;
+}
+
+.name-right {
+    margin-right: -30px;
+}
+
+.wedding-info {
+    text-align: center;
+}
+
+.wedding-date {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.wedding-time {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+
+.wedding-location {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+/* ========================================
+   Invitation Section
+   ======================================== */
+.invitation {
+    background-color: var(--color-white);
+}
+
+.invitation-text {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2;
+    color: #333;
+    position: relative;
+}
+
+.invitation-text p {
+    margin-bottom: 8px;
+}
+
+/* ========================================
+   Parents Section
+   ======================================== */
+.parents {
+    background-color: var(--color-bg);
+}
+
+.parents-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.parent-main-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 15px;
+}
+
+.phone-icon-large {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin: 10px auto 20px;
+}
+
+.phone-icon-large:hover {
+    transform: scale(1.1);
+    background-color: #b8a798;
+}
+
+.phone-icon-large svg {
+    width: 24px;
+    height: 24px;
+}
+
+.phone-spacer {
+    height: 68px;
+    margin-bottom: 10px;
+}
+
+.parent-label {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+}
+
+.parent-role {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-bottom: 3px;
+}
+
+.parent-name {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+}
+
+/* ========================================
+   Gallery Section
+   ======================================== */
+.gallery {
+    background-color: var(--color-bg);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    position: relative;
+}
+
+.gallery-grid a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 3/4;
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.gallery-grid a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-grid a:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.footer {
+    background-color: var(--color-white);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+.footer-names {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-text);
+    margin-top: 10px;
+}
+
+/* ========================================
+   Responsive Design - Desktop
+   ======================================== */
+@media screen and (min-width: 768px) {
+    .hero-text {
+        padding: 60px 40px;
+    }
+
+    .groom-name,
+    .bride-name {
+        font-size: 2.5rem;
+    }
+
+    .parents-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .invitation-text {
+        font-size: 1.7rem;
+    }
+
+    .below-main {
+        padding: 120px 20px;
+    }
+
+    .names-container {
+        padding: 0 40px;
+        margin-bottom: 100px;
+    }
+
+    .name-group-left {
+        margin-top: 55px;
+        margin-left: 60px;
+    }
+
+    .name-group-right {
+        margin-top: 55px;
+        margin-right: 30px;
+    }
+
+    .couple-label {
+        font-size: 1.8rem;
+    }
+
+    .name-left,
+    .name-right {
+        font-size: 2.5rem;
+    }
+
+    .wedding-date {
+        font-size: 1.4rem;
+    }
+
+    .wedding-time {
+        font-size: 1.4rem;
+    }
+
+    .wedding-location {
+        font-size: 1.4rem;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+}
+
+/* ========================================
+   PhotoSwipe Custom Styles
+   ======================================== */
+.pswp {
+    z-index: 9999;
+}
+
+.pswp__bg {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.pswp__button {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pswp__button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}

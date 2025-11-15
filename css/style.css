@@ -93,11 +93,6 @@ section {
    ======================================== */
 .hero {
     position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 0;
     overflow: hidden;
 }
@@ -181,11 +176,11 @@ section {
 }
 
 .names-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: start;
     margin-bottom: 80px;
-    padding: 0 20px;
+    padding: 0;
 }
 
 .name-group-left,
@@ -198,12 +193,16 @@ section {
 
 .name-group-left {
     margin-top: 80px;
-    margin-left: 40px;
+    justify-self: end;
 }
 
 .name-group-right {
     margin-top: 80px;
-    margin-right: 20px;
+    justify-self: start;
+}
+
+.pearl-spacer {
+    width: 80px;
 }
 
 .couple-label {
@@ -218,15 +217,12 @@ section {
 .name-left,
 .name-right {
     font-family: var(--font-serif);
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #000;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
 }
 
-.name-right {
-    margin-right: -30px;
-}
 
 .wedding-info {
     text-align: center;
@@ -390,9 +386,8 @@ section {
 }
 
 .footer-names {
-    font-family: var(--font-display);
+    font-family: var(--font-serif);
     font-size: 1.2rem;
-    font-style: italic;
     color: var(--color-text);
     margin-top: 10px;
 }
@@ -434,12 +429,14 @@ section {
 
     .name-group-left {
         margin-top: 55px;
-        margin-left: 60px;
     }
 
     .name-group-right {
         margin-top: 55px;
-        margin-right: 30px;
+    }
+
+    .pearl-spacer {
+        width: 250px;
     }
 
     .couple-label {
